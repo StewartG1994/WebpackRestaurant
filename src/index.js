@@ -24,9 +24,9 @@ function homepageComponent () {
     const ul = document.createElement('ul')
     nav.appendChild(ul)
 
-    const liOne = document.createElement('li')
-    const liTwo = document.createElement('li')
-    const liThree = document.createElement('li')
+    const liOne = document.createElement('button')
+    const liTwo = document.createElement('button')
+    const liThree = document.createElement('button')
 
     liOne.textContent = 'Home';
     liTwo.textContent = 'Menu';

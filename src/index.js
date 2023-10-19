@@ -1,6 +1,7 @@
 import './style.css'
-import burgerOneImg from './asset/burgerimg/burgerOne.jpg'
-import burgerTwoImg from './asset/burgerimg/burgerTwo.jpg'
+import timeIcon from './asset/icon/clock.png'
+import locationIcon from './asset/icon/location.png'
+
 
 function eventListeners () {
     let buttonOne = document.querySelector('.BtnOne')
@@ -49,12 +50,60 @@ function homepageComponent () {
     let welcome = document.createElement('h3')
     welcome.textContent = 'Come on down for delicious affordable food'
 
-    info.append(intro,welcome)
 
 
     const infoDivCard = document.createElement('div')
-    const hoursDiv = document.createElement('div')
+    infoDivCard.classList.add('infoDivCard')
+    
     const locationDiv = document.createElement('div')
+    locationDiv.classList.add('locationDiv')
+
+    const locationPic = new Image ();
+    locationPic.src = locationIcon
+
+    let addressDiv = document.createElement('div')
+
+    let addressTitle = document.createElement('h5')
+    addressTitle.textContent = 'Address';
+    let address  = document.createElement('p');
+    address.textContent = '42 Wallaby Way, Sydney'
+
+    addressDiv.append(addressTitle,address)
+
+    locationDiv.append(locationPic, addressDiv)
+
+    const hoursDiv = document.createElement('div')
+    hoursDiv.classList.add('hoursDiv');
+    const hoursPic = new Image();
+    hoursPic.src = timeIcon 
+
+
+    let timesDiv = document.createElement('div')
+
+    let mondayFri = document.createElement('p');
+    let satSun = document.createElement('p');
+
+
+    mondayFri.textContent = 'Monday - Friday 5pm - 11pm;'
+    satSun.textContent = 'Saturday to Sunday 3pm - 11pm' 
+
+    timesDiv.append(mondayFri,satSun)
+
+
+
+
+
+    hoursDiv.append(hoursPic, timesDiv)
+
+
+
+
+
+    infoDivCard.append(locationDiv,hoursDiv)
+
+
+
+    info.append(intro,welcome, infoDivCard)
 
 
 

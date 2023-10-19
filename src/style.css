@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
     font-family: 'StandardFont';
+    background-color: #96B6C5;
 }
 ol, ul {
 	list-style: none;
@@ -56,8 +57,8 @@ table {
 
 button{
 border-style: none;
-border-bottom: 1.5px solid black;
-background-color: white;
+border-bottom: 1.5px solid #F1F0E8;
+background-color: #ADC4CE;
 font-size: 1.5rem;
 
 }
@@ -67,47 +68,56 @@ button:hover{
     border-radius: 5px;
 }
 
-.headerImage{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    background-image:url(asset/images/header.jpg);
-    background-size: cover;
-    width: 100vw;
-    height: 300px;
-}
-
-h1, h3 {
+h1{
     color: white;
     font-size: 50px;
+    font-family: 'StandardFont';
+    padding-bottom: 15px;
+
+}
+
+h3 {
+    color: white;
+    font-size: 1.7rem;
     font-family: 'StandardFont';
 
 }
 
 .nav{
     padding: 20px 0px 20px 0px;
+    background-color: #ADC4CE;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.5px solid #F1F0E8;
 }
 
 ul{
     display: flex;
     gap: 30px;
-    
+}
+
+.contentSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 
 .info{
+    padding: 30px;
+    border-radius: 15px;
     display: flex;
-    gap: 50px;
-    flex-direction:column;
-    padding-top: 10px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-image: url(asset/images/header.jpg);
+    background-size: cover;
+    width: 100vw;
+    height:  90vh;
+    background-color: #F1F0E8;
 }
 
 .burgerImgs {
@@ -115,3 +125,4 @@ ul{
     height: 200px;
     margin: 10px;
 }
+

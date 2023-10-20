@@ -1,6 +1,7 @@
 import './style.css'
 
 import { menuComponent } from './menu'
+import { contactComponent } from './contact'
 import timeIcon from './asset/icon/clock.png'
 import locationIcon from './asset/icon/location.png'
 
@@ -8,6 +9,7 @@ import locationIcon from './asset/icon/location.png'
 function eventListeners () {
     let buttonOne = document.querySelector('.BtnOne')
     let buttonTwo = document.querySelector('.BtnTwo')
+    let buttonThree = document.querySelector('.BtnThree')
 
     buttonOne.addEventListener('click', () =>{
         
@@ -17,6 +19,12 @@ function eventListeners () {
 
     buttonTwo.addEventListener('click', () =>{
         menuComponent()
+    })
+
+    buttonThree.addEventListener('click', ()=>{
+        contactComponent()
+
+
     })
 }
 

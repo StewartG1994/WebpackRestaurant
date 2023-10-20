@@ -1,12 +1,22 @@
 import './style.css'
+
+import { menuComponent } from './menu'
 import timeIcon from './asset/icon/clock.png'
 import locationIcon from './asset/icon/location.png'
 
 
 function eventListeners () {
     let buttonOne = document.querySelector('.BtnOne')
+    let buttonTwo = document.querySelector('.BtnTwo')
+
     buttonOne.addEventListener('click', () =>{
-        console.log('test')
+        
+        document.body.innerHTML = '';
+        homepageComponent()
+    })
+
+    buttonTwo.addEventListener('click', () =>{
+        menuComponent()
     })
 }
 
@@ -109,8 +119,8 @@ function homepageComponent () {
 
 
     content.append(info)
+    eventListeners()
 
 }
-
+export {eventListeners}
 homepageComponent()
-eventListeners()
